@@ -1,10 +1,10 @@
-# Small Mimi
+# 壁に耳あり障子に目あり
 ## NAME
-Small Mimi - An unknow object listening your voice
+KMSM 
 
 ## DESCRIPTION
 
 ## OPTION
 
 ## Web Demo
-[here](https://arei1126.github.io/smallMimi/)
+[here](https://arei1126.github.io/kmsm/)
