@@ -1,7 +1,7 @@
 `use strict`
 import * as IDB from "./module/idb.js"
 
-const VERSION = "0.3";
+const VERSION = "0.32";
 
 const LANG = "ja";
 const PITCH = 0.7;
