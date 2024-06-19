@@ -1,5 +1,7 @@
 `use strict`
 
+const CIRCLER_T = 5*1000 // (ms)
+const CIRCLER_FACTOR = 0.3;
 // FOVとは、半分でない方の角度のこと
 const AZ_FOV = 0.6561787179913949/2;
 const DEFAULT_FOV =  1.2/2; 
@@ -29,6 +31,7 @@ var PreviousTime = 0;
 var LoopThreshold = 0;
 
 let Trick_art_correction = TRICK_ART_CORRECTION;
+let Roll = false;
 
 function delay(milliseconds) {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -306,8 +309,14 @@ window.addEventListener("load", async ()=>{
 		//eyes.clearIrisAll();
 		
 		if(face == undefined){
-			eyes.drawIrisAll(eyeInfo.theta);
-
+			let theta;
+			if(Roll == true){
+				theta = getCirulerTheta(timeStamp);
+			}
+			else{
+				theta = eyeInfo.theta;
+			}
+			eyes.drawIrisAll(theta);
 		}
 		else{	
 			const theta = getTheta(face, Fov,cameraDimention, cameraRatioToDiagonal);
@@ -351,7 +360,7 @@ window.addEventListener("load", async ()=>{
 	const apply = document.querySelector("#apply");
 
 	const trick = document.querySelector("#trick");
-	
+	const roll = document.querySelector("#roll");
 
 	//canvas.addEventListener("click", ()=>{
 
@@ -367,6 +376,7 @@ window.addEventListener("load", async ()=>{
 		
 		apply.addEventListener("click", ()=>{	
 			Trick_art_correction = trick.checked;
+			Roll = roll.checked;
 
 			for(const method of methods){
 				if(method.checked){
@@ -411,6 +421,17 @@ window.addEventListener("load", async ()=>{
 	//await draw_loop();
 
 });
+
+function getCirulerTheta(timeStamp){	
+	//const theta_x = (timeStamp*2*Math.PI/CIRCLER_T)*2;
+	//const theta_y = ((timeStamp*2*Math.PI/CIRCLER_T) - (1/2)*Math.PI)*(CIRCLER_FACTOR);
+	
+	const theta_x = 2*Math.acos(CIRCLER_FACTOR*Math.cos(timeStamp*(2*Math.PI/CIRCLER_T)));
+	//const theta_y= 2*Math.acos(CIRCLER_FACTOR*Math.sin(timeStamp*(2*Math.PI/CIRCLER_T)));
+	const theta_y = 0;
+	
+	return {x: theta_x, y:theta_y}; 
+}
 
 function getTheta(face,fov,cameraDimention,ratioToDiagonal){
 	let camdim = cameraDimention;

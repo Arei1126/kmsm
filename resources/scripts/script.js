@@ -1,7 +1,7 @@
 `use strict`
 import * as IDB from "./module/idb.js"
 
-const VERSION = "0.32";
+const VERSION = "0.4";
 
 const LANG = "ja";
 const PITCH = 0.7;
@@ -56,7 +56,7 @@ Situations.push(stKogaku);
 window.addEventListener("load", async ()=>{
 
 	const guide = document.createElement("p");
-	guide.innerText = `Ver. ${VERSION} Tap or Click here to Start`
+	guide.innerText = `Ver. ${VERSION}`
 	document.body.appendChild(guide);
 
 	const manager = document.querySelector("#manager");
