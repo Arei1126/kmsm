@@ -1,5 +1,5 @@
-const VERSION = "0.36";
-const CACHE_NAME = `sMimi-${VERSION}`;
+const VERSION = "0.1";
+const CACHE_NAME = `kmsm-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
 	"./manifest.json",
@@ -11,7 +11,10 @@ const APP_STATIC_RESOURCES = [
 	"./resources/icons/icon.png",
 	"./resources/sound/wall_switch.mp3",
 	"./resources/sound/wall_switch_reverse.mp3",
-
+	"./resources/scripts/module/reyes.js",
+	"./resources/scripts/module/face-api.js/dist/face-api.js",
+	"./resources/scripts/module/face-api.js/weights/tiny_face_detector_model-shard1",
+	"./resources/scripts/module/face-api.js/weights/tiny_face_detector_model-weights_manifest.json",
 ];
 
 self.addEventListener("install", (e) => {  // chashの更新はここで。cache_nameが変わるとここのが読み込まれる

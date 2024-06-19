@@ -1,7 +1,7 @@
 {
-	"name": "SmallMimi",
-	"description":"small mimi",
-	"short_name": "sMimi",
+	"name": "kmsm",
+	"description":"Ear on wall, Eye on door",
+	"short_name": "kmsm",
 	"start_url" : "./index.html",
 	"id": "./index.html",
 	"scope": "./",

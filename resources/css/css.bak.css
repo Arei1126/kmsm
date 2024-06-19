@@ -19,6 +19,7 @@ body{
 
 dialog{
 	overflow: scroll;
+	font-size: medium;
 }
 
 button {

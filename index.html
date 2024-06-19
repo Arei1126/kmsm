@@ -3,11 +3,13 @@
 	<head>
 		<link rel="manifest" href="./manifest.json" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Small KiiMimi</title>
+		<title>Eye in door, Ear in wall.</title>
 	</head>
 	<body>
 		<link type="text/css" rel="stylesheet" href="./resources/css/css.css">
 		<script type="module" src="./resources/scripts/script.js"></script>
+		<script type="module" src="./resources/scripts/module/reyes.js"></script>
+		<script type="module" src="./resources/scripts/module/face-api.js/dist/face-api.js"></script>
 		<dialog id="manager">
 
 			<form method="dialog">
@@ -20,17 +22,67 @@
 				</select>
 
 			</div>
-					<div id="downloadList">
-					<label for="downloadList">Recording List:</label>
-					</div>
+			<div id="downloadList">
+				<label for="downloadList">Recording List:</label>
+			</div>
+
+			<div id="eyeSetting">
+				<h2>Eye Settings</h2>
+				<fieldset>
+					<legend>Choose FOV input type</legend>
+					<input type="radio" id="fov" name="fov_method" value="fov" checked />
+					<label for="fov">FOV (rad)</label>		
+					<br>
+					<input type="number" id="fov_input" />
+					<label for="fov_input">FOV (rad)</label>	
+					<hr>
+
+					<input type="radio" id="dfov" name="fov_method" value="dfov" />
+					<label for="dfov">FOV (deg)</label>	
+					<br>
+					<input type="number" id="dfov_input" />
+					<label for="dfov_input">FOV (degree)</label>	
+					<hr>
+
+					<input type="radio" id="calc" name="fov_method" value="calc" />
+					<label for="calc">Calculate by focal length (mm) and sensor diagonal length (mm)</label>
+					<br>
+					<input type="number" id="f_input" />
+					<label for="f_input">Focal length (mm)</label>	
+					<br>
+					<input type="number" id="size_input" />
+					<label for="size_input">Sensor diagonal length (mm)</label>
+
+				</fieldset>
+				<input type="checkbox" id="trick">
+				<label for="trick">Iris trick art correction</label>
+
+
+				<hr>
+				<div>
+					<button id="apply" name="but">Apply</button>
+				</div>
+
+
+			</div>
 		</dialog>
 
-		<p id="rec" class="notrec">RECORDING</p>
-		
-		<button id="startButton" class="styled-button">
-			<div class="inner-circle"></div>
-			<p id="PUSH">PUSH</p>
-		</button>
+		<dialog id="load">
+			<h2>Loading</h2>
+		</dialog>
+
+		<div id="door"></div>
+
+		<div id="mimi">
+
+
+			<div id="rec" class="notrec">RECORDING</div>
+
+			<button id="startButton" class="styled-button">
+				<div class="inner-circle"></div>
+				<p id="PUSH">PUSH</p>
+			</button>
+		</div>
 	</body>
 	<script>
 		if ("serviceWorker" in navigator) {

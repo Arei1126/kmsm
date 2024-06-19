@@ -1,28 +1,59 @@
+html{
+	/*background: url(./images/door.png) repeat;*/
+}
+
+#mimi{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: auto;
+}
+
+
+video {
+	display: none;
+} 
+
+
 body{
+	transform: scale(0.9);
 	height: 100vh;
 	margin: 0px;
 	overflow: hidden;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row-reverse;
 	align-content: flex-start;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	font-size: xx-large;
-	background-color: floralwhite;	
-
+	background-color: floralwhite;
 	user-select: none;
 	touch-action: none;
-	overscroll-behavior: none; 
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
-	cursor:pointer;
+	overscroll-behavior: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	cursor: pointer;
+	margin: none;
+
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+::backdrop{
+	overflow: hidden;
 }
 
 dialog{
 	overflow: scroll;
+	font-size: medium;
 }
 
 button {
-	font-size: xxx-large;
+	font-size: medium;
 }
 
 #PUSH {
@@ -31,9 +62,9 @@ button {
 }
 
 .inner-circle {
-    width: 175px;
+    /*width: 175px;*/
     aspect-ratio: 1.0;
-    /*height: 50px;*/
+    height: 180px;
     background-color: #ff2600;
     border-radius: 50%;
     position: absolute;
@@ -53,12 +84,12 @@ button {
     font-size: xxx-large;
     border: none;
     border-radius: 50%; /* ä¸¸ã„ãƒœã‚¿ãƒ³ */
-    width: 80%;
+    height: 230px;
     /*height: 100px;*/
     aspect-ratio: 1.0;
     cursor: pointer;
-    box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.5), /* å¤–å´ã®å½±  x,y,bular radius*/
-                inset 0 -10px 8px 5px rgba(0, 0, 0, 0.1); /* å†…å´ã®é™° */
+    box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.5), 
+                inset 0 -10px 8px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
     outline: none;
 }
@@ -77,7 +108,7 @@ button {
 }
 
 #rec{
-	font-size: 2em;
+	font-size: xxx-large;
 	font-family: sans-serif;
 	color: white;
 	opacity: 0;
