@@ -1,4 +1,4 @@
-const VERSION = "0.1";
+const VERSION = "0.3";
 const CACHE_NAME = `kmsm-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
