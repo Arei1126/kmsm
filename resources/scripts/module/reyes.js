@@ -2,9 +2,11 @@
 
 const CIRCLER_T = 5*1000 // (ms)
 const CIRCLER_FACTOR = 0.3;
+const IDLE_THRETHOLD = 5*1000 //(ms)
+
 // FOVとは、半分でない方の角度のこと
 const AZ_FOV = 0.6561787179913949/2;
-const DEFAULT_FOV =  1.2/2; 
+const DEFAULT_FOV =  1.25/2; 
 //const DEFAULT_FOV = 0.2914567944778674;  
 
 const COLOR_IRIS = "#000000";
@@ -32,6 +34,8 @@ var LoopThreshold = 0;
 
 let Trick_art_correction = TRICK_ART_CORRECTION;
 let Roll = false;
+
+let LastFaceFoundTIme = 0;
 
 function delay(milliseconds) {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -310,7 +314,7 @@ window.addEventListener("load", async ()=>{
 		
 		if(face == undefined){
 			let theta;
-			if(Roll == true){
+			if( (Roll == true) && (timeStamp - LastFaceFoundTIme > IDLE_THRETHOLD) ){
 				theta = getCirulerTheta(timeStamp);
 			}
 			else{
@@ -319,6 +323,7 @@ window.addEventListener("load", async ()=>{
 			eyes.drawIrisAll(theta);
 		}
 		else{	
+			LastFaceFoundTIme = timeStamp;
 			const theta = getTheta(face, Fov,cameraDimention, cameraRatioToDiagonal);
 			eyes.drawIrisAll(theta);
 			eyeInfo.theta = theta;
