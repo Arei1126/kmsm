@@ -27,17 +27,23 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.2102413"
-     inkscape:cx="986.96116"
-     inkscape:cy="1179.597"
-     inkscape:window-width="1280"
-     inkscape:window-height="986"
-     inkscape:window-x="0"
-     inkscape:window-y="287"
+     inkscape:zoom="0.074331525"
+     inkscape:cx="1849.8208"
+     inkscape:cy="2085.2525"
+     inkscape:window-width="1024"
+     inkscape:window-height="730"
+     inkscape:window-x="3200"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <rect
+       x="1224.1036"
+       y="1897.546"
+       width="1079.2517"
+       height="610.37267"
+       id="rect344" />
     <rect
        x="1496.6027"
        y="782.49204"
@@ -50,6 +56,12 @@
        width="1297.3452"
        height="836.10476"
        id="rect236" />
+    <rect
+       x="1224.1036"
+       y="1897.546"
+       width="1079.2517"
+       height="610.37268"
+       id="rect344-3" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -70,7 +82,7 @@
        style="font-size:48px;line-height:1.05;font-family:sans-serif;letter-spacing:0px;white-space:pre;shape-inside:url(#rect236);display:inline;fill:#ffffff"><tspan
          x="677.22656"
          y="727.07323"
-         id="tspan590">🎙</tspan></text>
+         id="tspan1015">🎙</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(8.223334,0,0,8.223334,-12015.958,-6396.2667)"
@@ -78,6 +90,22 @@
        style="font-size:48px;line-height:1.05;font-family:sans-serif;letter-spacing:0px;white-space:pre;shape-inside:url(#rect400);display:inline;fill:#ffffff"><tspan
          x="1496.6035"
          y="821.3662"
-         id="tspan592">☻</tspan></text>
+         id="tspan1017">☻</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(3.8498907,0,0,3.8498907,-4419.6867,-6851.3412)"
+       id="text342"
+       style="font-size:48px;line-height:1.05;font-family:sans-serif;letter-spacing:0px;white-space:pre;shape-inside:url(#rect344);fill:#ffffff;fill-opacity:1"><tspan
+         x="1224.1035"
+         y="1936.4209"
+         id="tspan1019">👁</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(3.8498907,0,0,3.8498907,-4233.8524,-6851.3412)"
+       id="text342-6"
+       style="font-size:48px;line-height:1.05;font-family:sans-serif;letter-spacing:0px;white-space:pre;shape-inside:url(#rect344-3);display:inline;fill:#ffffff;fill-opacity:1"><tspan
+         x="1224.1035"
+         y="1936.4209"
+         id="tspan1021">👁</tspan></text>
   </g>
 </svg>
