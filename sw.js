@@ -1,4 +1,4 @@
-const VERSION = "0.3";
+const VERSION = "0.31";
 const CACHE_NAME = `kmsm-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
@@ -12,9 +12,9 @@ const APP_STATIC_RESOURCES = [
 	"./resources/sound/wall_switch.mp3",
 	"./resources/sound/wall_switch_reverse.mp3",
 	"./resources/scripts/module/reyes.js",
-	"./resources/scripts/module/face-api.js/dist/face-api.js",
-	"./resources/scripts/module/face-api.js/weights/tiny_face_detector_model-shard1",
-	"./resources/scripts/module/face-api.js/weights/tiny_face_detector_model-weights_manifest.json",
+	"./face-api.js/dist/face-api.js",
+	"./face-api.js/weights/tiny_face_detector_model-shard1",
+	"./face-api.js/weights/tiny_face_detector_model-weights_manifest.json",
 ];
 
 self.addEventListener("install", (e) => {  // chashの更新はここで。cache_nameが変わるとここのが読み込まれる
