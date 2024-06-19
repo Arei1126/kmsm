@@ -277,7 +277,7 @@ window.addEventListener("load", async ()=>{
 	const ctx = canvas.getContext("2d");
 
 	//await faceapi.nets.tinyFaceDetector.loadFromUri("./face-api.js/weights");	
-	await faceapi.nets.tinyFaceDetector.loadFromUri("/face-api.js/weights");	
+	await faceapi.nets.tinyFaceDetector.loadFromUri("./face-api.js/weights");	
 
 	let Fov = DEFAULT_FOV;
 
